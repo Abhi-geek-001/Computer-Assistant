@@ -9,7 +9,6 @@ import os
 import smtplib
 import pyjokes
 
-
 engine = pyttsx3.init('sapi5') #Starting audio
 voices = engine.getProperty('voices')
 # print(voices[1].id)# to show number of auido and name
@@ -101,9 +100,12 @@ if __name__ == "__main__":
             jokes = pyjokes.get_joke()
             speak(jokes)
 
-        # About    
+        # what can you
         elif 'what can you do' in query:
-            speak ("I am
+            speak("For now i can only do the below tasks")
+            print("Throw a random joke, Play song , send mail, search wiki , open YT and etc")
+            speak ("I will get more functions in future , future is here old man")
+
 
         # to play music
                    
@@ -139,5 +141,11 @@ if __name__ == "__main__":
                 print(e)
                 speak("Something went upside down")
                 print("Things went upside down")
+
+        #Termiates the bot
+        elif 'stop listening' in query:
+            quit()
         
-                  
+        # Finished the statement
+        else:
+            pass
