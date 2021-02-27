@@ -33,7 +33,7 @@ def wishMe():
     else:
         speak("Good Evening!")  
 
-    speak("Yo mah Nigga !!")       # Customize it
+    speak("Hi, sup man !!")       # Customize it
 
 def takeCommand():
     #It takes microphone input from the user and returns string output
@@ -127,6 +127,13 @@ if __name__ == "__main__":
             info = wikipedia.summary(prsn, 2)
             print(info)
             speak(info)
+            
+        # open reddit
+        elif 'meme' or 'memes' in query:
+            a=1
+            while a==1:
+                webbrowser.open("https://www.reddit.com/r/memes/")
+                a=2
 
         #sends an email
         elif 'email' in query:
